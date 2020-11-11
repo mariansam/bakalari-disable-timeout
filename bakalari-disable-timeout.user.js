@@ -23,7 +23,11 @@
     if (typeof appRoot === 'string') {
         setInterval(() => {
             fetch(appRoot + 'sessionextend')
-                .then(() => console.log('bakalari-disable-timeout: session extended'));
+                .then(() => console.log('bakalari-disable-timeout: session extended'))
+                .catch(error => {
+                    console.error('bakalari-disable-timeout: an error happened while extending the session');
+                    console.error(error);
+                });
         }, 30000);
     }
 })();
