@@ -2,6 +2,7 @@
 
 Disable the auto-logoff "feature" of Bakaláři
 
+**Warning:** this script doesn't work if your computer disconnects from the internet.
 
 ## Installation
 
