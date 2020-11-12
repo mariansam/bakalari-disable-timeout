@@ -20,9 +20,12 @@
 
     console.log('bakalari-disable-timeout: started');
 
-    if (typeof appRoot === 'string') {
+    var bakalariAppRoot = (window.appRoot !== undefined ? window.appRoot : unsafeWindow.appRoot);
+    var sessionExtendUrl = window.location.protocol + '//' + window.location.host + bakalariAppRoot + 'sessionextend';
+
+    if (typeof bakalariAppRoot === 'string') {
         setInterval(() => {
-            fetch(appRoot + 'sessionextend')
+            fetch(sessionExtendUrl)
                 .then(() => console.log('bakalari-disable-timeout: session extended'))
                 .catch(error => {
                     console.error('bakalari-disable-timeout: an error happened while extending the session');
