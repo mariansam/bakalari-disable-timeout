@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Bakaláři - Disable Timeout
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.1
 // @description  Disable the auto-logoff "feature" of Bakaláři
 // @author       Marian Šámal
 // @include      /^https?:\/\/.*baka.*$/
